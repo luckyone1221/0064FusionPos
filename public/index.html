@@ -6,79 +6,357 @@
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body data-bg="01.png">
 		<div class="main-wrapper">
-			<div class="menu-mobile menu-mobile--js d-lg-none">
-				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-				</div>
-				<div class="menu-mobile__inner">
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-							</ul>
-						</li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--  мобильное меню-->
-			<!-- start header-->
-			<header class="header" id="header">
-			</header>
-			<!-- end header-->
+			<!--+header()-->
 			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-							</div>
+			<div class="top-nav top-nav--js block-with-lazy">
+				<div class="top-nav__container container">
+					<div class="top-nav__row row align-items-center">
+						<div class="col"><a class="top-nav__logo" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 						</div>
-						<div class="col d-none d-lg-block">
-							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
-									<ul class="sub-menu">
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-									</ul>
-								</li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-							</ul>
+						<div class="col-auto d-none d-sm-block"><a class="top-nav__tell" href="tel:88007757427">8 (800) 775-74-27</a>
+						</div>
+						<div class="col-auto">
+							<div class="top-nav__soc-row row">
+								<div class="col-auto"><a class="top-nav__soc" href="#"><img loading="lazy" src="img/svg/soc-wa.svg" alt=""/></a>
+								</div>
+								<div class="col-auto"><a class="top-nav__soc" href="#"><img loading="lazy" src="img/svg/soc-tg.svg" alt=""/></a>
+								</div>
+								<div class="col-auto"><a class="top-nav__soc" href="#"><img loading="lazy" src="img/svg/soc-vb.svg" alt=""/></a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<div class="soc"><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-fb ">
-					<use xlink:href="img/svg/sprite.svg#fb"></use>
-				</svg></a><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-instagram ">
-					<use xlink:href="img/svg/sprite.svg#instagram"></use>
-				</svg></a><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-telegram ">
-					<use xlink:href="img/svg/sprite.svg#telegram"></use>
-				</svg></a>
-			</div><a class="link-modal-js" href="#modal-call">фывфывфы</a>
+			<!-- start headerBlock-->
+			<div class="headerBlock section" id="headerBlock">
+				<div class="headerBlock__bg-box">
+					<div class="headerBlock__bg headerBlock__bg--1"><img loading="lazy" src="img/svg/circle.svg" alt=""/>
+					</div>
+					<div class="headerBlock__bg headerBlock__bg--2"><img loading="lazy" src="img/svg/plus.svg" alt=""/>
+					</div>
+					<div class="headerBlock__bg headerBlock__bg--3"><img loading="lazy" src="img/svg/star.svg" alt=""/>
+					</div>
+					<div class="headerBlock__bg headerBlock__bg--4"><img loading="lazy" src="img/svg/triangle.svg" alt=""/>
+					</div>
+				</div>
+				<div class="headerBlock__container container">
+					<div class="section-title text-center">
+						<div class="section-title__row row justify-content-center align-items-center gy-2">
+							<div class="col-auto">
+								<h1 class="mb-0">Специальный тариф для клиентов</h1>
+							</div>
+							<div class="col-auto">
+								<div class="section-title__img"><img loading="lazy" src="img/svg/my-business.svg" alt=""/>
+								</div>
+							</div>
+						</div>
+						<p>Компании «Fusion POS» и «Моё дело» объединились и запустили специальные тарифы для клиентов</p>
+					</div>
+					<div class="headerBlock__items-row row">
+						<div class="headerBlock__col col-xl-4">
+							<div class="headerBlock__item">
+								<div class="headerBlock__top">
+									<div class="headerBlock__top-row row">
+										<div class="col">
+											<div class="headerBlock__name">Лайт
+											</div>
+											<div class="headerBlock__name-img"><img class="img-svg-js" loading="lazy" src="img/svg/my-business.svg" alt=""/>
+											</div>
+										</div>
+										<div class="col-auto text-end">
+											<div class="headerBlock__price headerBlock__price--old">1 790
+											</div>
+											<div class="headerBlock__price headerBlock__price--curr">1 090
+											</div>
+											<div class="headerBlock__price-txt">руб/мес
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="headerBlock__content">
+									<div class="headerBlock__descr">
+										Тариф для маленьких
+										<br/>точек продаж с быстрым
+										<br/>обслуживанием
+									</div>
+									<div class="headerBlock__chars">
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Позиций меню
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--black"><img class="img-svg-js" loading="lazy" src="img/svg/infinity.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Складской учёт
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--blue"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Пользователи
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--black"><img class="img-svg-js" loading="lazy" src="img/svg/infinity.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Режим работы
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">Быстрое обслуживание
+											</div>
+										</div>
+									</div>
+									<div class="headerBlock__check-title">Система лояльности клиентов CRM
+									</div>
+									<div class="headerBlock__check-list">
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Простые скидки</span>
+										</div>
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Накопительные скидки</span>
+										</div>
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Счастливые часы</span>
+										</div>
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Бонусная система</span>
+										</div>
+									</div><a class="headerBlock__try-btn" href="#">Попробовать бесплатно</a>
+								</div>
+							</div>
+						</div>
+						<div class="headerBlock__col col-xl-4">
+							<div class="headerBlock__item">
+								<div class="headerBlock__top">
+									<div class="headerBlock__top-row row">
+										<div class="col">
+											<div class="headerBlock__name">One
+											</div>
+											<div class="headerBlock__name-img"><img class="img-svg-js" loading="lazy" src="img/svg/my-business.svg" alt=""/>
+											</div>
+										</div>
+										<div class="col-auto text-end">
+											<div class="headerBlock__price headerBlock__price--old">1 490
+											</div>
+											<div class="headerBlock__price headerBlock__price--curr">990
+											</div>
+											<div class="headerBlock__price-txt">руб/мес
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="headerBlock__content">
+									<div class="headerBlock__descr">
+										Простой тариф для маленькой
+										<br/>точки продаж, например мини-кофейни
+										<br/>или вейпшопа
+									</div>
+									<div class="headerBlock__chars">
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Позиций меню
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--black"><img class="img-svg-js" loading="lazy" src="img/svg/infinity.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Складской учёт
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--blue"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Пользователи
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--black"><img class="img-svg-js" loading="lazy" src="img/svg/infinity.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Режим работы
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">Быстрое обслуживание
+											</div>
+										</div>
+									</div>
+									<div class="headerBlock__check-title">Система лояльности клиентов CRM
+									</div>
+									<div class="headerBlock__check-list">
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Простые скидки</span>
+										</div>
+									</div><a class="headerBlock__try-btn" href="#">Попробовать бесплатно</a>
+								</div>
+							</div>
+						</div>
+						<div class="headerBlock__col col-xl-4">
+							<div class="headerBlock__item">
+								<div class="headerBlock__top">
+									<div class="headerBlock__top-row row">
+										<div class="col">
+											<div class="headerBlock__name">Стандарт
+											</div>
+											<div class="headerBlock__name-img"><img class="img-svg-js" loading="lazy" src="img/svg/my-business.svg" alt=""/>
+											</div>
+										</div>
+										<div class="col-auto text-end">
+											<div class="headerBlock__price headerBlock__price--old">2 490
+											</div>
+											<div class="headerBlock__price headerBlock__price--curr">1 790
+											</div>
+											<div class="headerBlock__price-txt">руб/мес
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="headerBlock__content">
+									<div class="headerBlock__descr">
+										Неограниченный тариф для большой сети
+										<br/>заведений с гибким учетом и полным
+										<br/>функционалом
+									</div>
+									<div class="headerBlock__chars">
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Позиций меню
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--black"><img class="img-svg-js" loading="lazy" src="img/svg/infinity.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Складской учёт
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--blue"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Пользователи
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">
+												<div class="headerBlock__icon headerBlock__icon--black"><img class="img-svg-js" loading="lazy" src="img/svg/infinity.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+										<div class="headerBlock__chr-item row align-items-center gy-2">
+											<div class="headerBlock__key-col col-sm-auto">Режим работы
+											</div>
+											<div class="headerBlock__val-col col-sm-auto">Быстрое обслуживание или интерфейс залов со столами
+											</div>
+										</div>
+									</div>
+									<div class="headerBlock__check-title">Система лояльности клиентов CRM
+									</div>
+									<div class="headerBlock__check-list">
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Простые скидки</span>
+										</div>
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Накопительные скидки</span>
+										</div>
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Счастливые часы</span>
+										</div>
+										<div class="headerBlock__li">
+											<div class="headerBlock__li-icon"><img class="img-svg-js" loading="lazy" src="img/svg/check.svg" alt=""/>
+											</div><span>Бонусная система</span>
+										</div>
+									</div><a class="headerBlock__try-btn" href="#">Попробовать бесплатно</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="headerBlock__lower-txt text-center">* Все тарифы указаны за одно рабочее место кассира<br/>* Акционные тарифы действуют 6 месяцев с момента первого платежа
+						<a href="#">Условия</a>
+					</div>
+				</div>
+			</div>
+			<!-- end headerBlock-->
+			<!-- start sProgram-->
+			<section class="sProgram section" id="sProgram">
+				<div class="sProgram__container container">
+					<div class="section-title text-center">
+						<h2>
+							Воспользуйтесь программой
+							<span class="text-blue">Fusion POS</span>
+							и
+						</h2>
+					</div>
+					<div class="sProgram__row row">
+						<div class="col-sm-6 col-lg-3">
+							<div class="sProgram__item">
+								<div class="sProgram__img"><img loading="lazy" src="img/svg/sProgram-1.svg" alt=""/>
+								</div>
+								<div class="sProgram__txt">
+									Ускорьте работу
+									<br/>заведений общепита
+									<br/>и магазинов
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<div class="sProgram__item">
+								<div class="sProgram__img"><img loading="lazy" src="img/svg/sProgram-2.svg" alt=""/>
+								</div>
+								<div class="sProgram__txt">
+									Помогите увеличить
+									<br/>доходы и оптимизировать расходы бизнеса
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<div class="sProgram__item">
+								<div class="sProgram__img"><img loading="lazy" src="img/svg/sProgram-3.svg" alt=""/>
+								</div>
+								<div class="sProgram__txt">
+									Фокусируйтесь
+									<br/>только на ключевых показателях бизнеса
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<div class="sProgram__item">
+								<div class="sProgram__img"><img loading="lazy" src="img/svg/sProgram-4.svg" alt=""/>
+								</div>
+								<div class="sProgram__txt">
+									Делайте
+									<br/>бизнес более
+									<br/>управляемым
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sProgram-->
 			<!-- start topLine-->
 			<section class="topLine section" id="topLine">
 				<div class="container">
@@ -89,16 +367,6 @@
 				</div>
 			</section>
 			<!-- end topLine-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</div>
-			<!-- end headerBlock-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">

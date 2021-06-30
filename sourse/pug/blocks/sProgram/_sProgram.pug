@@ -1,0 +1,47 @@
+mixin sProgram(data)
+	// start sProgram
+	+b.SECTION.sProgram.section#sProgram&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2
+					| Воспользуйтесь программой
+					|
+					span.text-blue Fusion POS
+					|
+					| и
+			+e.row.row
+				+sProgramItem(1)
+					| Ускорьте работу
+					|
+					br
+					| заведений общепита
+					|
+					br
+					| и магазинов
+				+sProgramItem(2)
+					| Помогите увеличить
+					|
+					br
+					| доходы и оптимизировать расходы бизнеса
+				+sProgramItem(3)
+					| Фокусируйтесь
+					|
+					br
+					| только на ключевых показателях бизнеса
+				+sProgramItem(4)
+					| Делайте
+					|
+					br
+					| бизнес более
+					|
+					br
+					| управляемым
+	// end sProgram
+
+mixin sProgramItem(imgNum)
+	.col-sm-6.col-lg-3
+		+e.item
+			+e.img
+				img(loading="lazy" src=`img/svg/sProgram-${imgNum}.svg` alt="")
+			+e.txt
+				block

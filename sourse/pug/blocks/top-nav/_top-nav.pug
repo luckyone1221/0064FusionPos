@@ -1,28 +1,31 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
+	+b.top-nav--js.block-with-lazy
+		+e.container.container
+			+e.row.row.align-items-center
+				.col
+					+e.logo(href='/')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col-auto.d-none.d-sm-block
+					+e.tell(href="tel:88007757427") 8 (800) 775-74-27
+				.col-auto
+					+e.soc-row.row
+						+topNavSocItem('wa')
+						+topNavSocItem('tg')
+						+topNavSocItem('vb')
 					
 	// end top-nav
+
+mixin topNavSocItem(imgName)
+	.col-auto
+		+e.soc(href='#')
+			img(loading="lazy" src=`img/svg/soc-${imgName}.svg` alt="")
+

@@ -1,10 +1,128 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
+		+e.bg-box
+			+e.bg--1
+				img(loading="lazy" src="img/svg/circle.svg" alt="")
+			+e.bg--2
+				img(loading="lazy" src="img/svg/plus.svg" alt="")
+			+e.bg--3
+				img(loading="lazy" src="img/svg/star.svg" alt="")
+			+e.bg--4
+				img(loading="lazy" src="img/svg/triangle.svg" alt="")
+		+e.container.container
 			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+				+e.row.row.justify-content-center.align-items-center.gy-2
+					.col-auto
+						h1.mb-0 Специальный тариф для клиентов
+					.col-auto
+						+e.img
+							img(loading="lazy" src="img/svg/my-business.svg" alt="")
+				p Компании «Fusion POS» и «Моё дело» объединились и запустили специальные тарифы для клиентов
+			+e.items-row.row
+				+headerBlockItem({
+					name: 'Лайт',
+					oldPrice: '1 790',
+					currPrice: '1 090',
+					workShedule: 'Быстрое обслуживание',
+					checkList: [
+						'Простые скидки',
+						'Накопительные скидки',
+						'Счастливые часы',
+						'Бонусная система',
+					],
+				})
+					| Тариф для маленьких
+					|
+					br
+					| точек продаж с быстрым
+					|
+					br
+					| обслуживанием
+				+headerBlockItem({
+					name: 'One',
+					oldPrice: '1 490',
+					currPrice: '990',
+					workShedule: 'Быстрое обслуживание',
+					checkList: [
+						'Простые скидки',
+					],
+				})
+					| Простой тариф для маленькой
+					|
+					br
+					| точки продаж, например мини-кофейни
+					|
+					br
+					| или вейпшопа
+				+headerBlockItem({
+					name: 'Стандарт',
+					oldPrice: '2 490',
+					currPrice: '1 790',
+					workShedule: 'Быстрое обслуживание или интерфейс залов со столами',
+					checkList: [
+						'Простые скидки',
+						'Накопительные скидки',
+						'Счастливые часы',
+						'Бонусная система',
+					],
+				})
+					| Неограниченный тариф для большой сети
+					|
+					br
+					| заведений с гибким учетом и полным
+					|
+					br
+					| функционалом
+			+e.lower-txt.text-center
+				| * Все тарифы указаны за одно рабочее место кассира
+				br
+				| * Акционные тарифы действуют 6 месяцев с момента первого платежа
+				|
+				a(href='#') Условия
 	// end headerBlock
+
+mixin headerBlockItem(data)
+	+e.col.col-xl-4
+		+e.item
+			+e.top
+				+e.top-row.row
+					.col
+						+e.name=data.name
+						+e.name-img
+							img.img-svg-js(loading="lazy" src="img/svg/my-business.svg" alt="")
+					.col-auto.text-end
+						+e.price--old=data.oldPrice
+						+e.price--curr=data.currPrice
+						+e.price-txt руб/мес
+			+e.content
+				+e.descr
+					block
+				+e.chars
+					+headerBlockCrItem('Позиций меню', '')
+						+e.icon--black
+							img.img-svg-js(loading="lazy" src='img/svg/infinity.svg' alt="")
+					+headerBlockCrItem('Складской учёт', '')
+						+e.icon--blue
+							img.img-svg-js(loading="lazy" src='img/svg/check.svg' alt="")
+					+headerBlockCrItem('Пользователи', '')
+						+e.icon--black
+							img.img-svg-js(loading="lazy" src='img/svg/infinity.svg' alt="")
+					+headerBlockCrItem('Режим работы', data.workShedule)
+				+e.check-title Система лояльности клиентов CRM
+				+e.check-list
+					-for(let item of data.checkList)
+						+e.li
+							+e.li-icon
+								img.img-svg-js(loading="lazy" src='img/svg/check.svg' alt="")
+							span=item
+				+e.try-btn(href="#") Попробовать бесплатно
+
+mixin headerBlockCrItem(key, val)
+	+e.chr-item.row.align-items-center.gy-2
+		+e.key-col.col-sm-auto=key
+		if block
+			+e.val-col.col-sm-auto
+				block
+		else
+			+e.val-col.col-sm-auto=val

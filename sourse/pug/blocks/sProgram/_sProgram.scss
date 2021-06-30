@@ -1,0 +1,112 @@
+// start .sProgram
+.sProgram {
+	--sPB: #{rem(40)};
+
+	--sPT: #{rem(30)};
+	--sTPB: #{rem(65)};
+	@include media-breakpoint-up(xxl){
+		--sPT: #{rem(55)};
+		--sTPB: #{rem(96)};
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			position: relative;
+			left: -5px;
+		}
+	}
+	.section-title{
+		h2{
+			letter-spacing: rem(0.3);
+
+			@include media-breakpoint-up(lg){
+				font-size: rem(40);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(50);
+			}
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(20)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-y: #{rem(30)};
+		}
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(20)};
+			--bs-gutter-y: #{rem(20)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(30)};
+			--bs-gutter-y: #{rem(30)};
+		}
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(42)};
+			--bs-gutter-y: #{rem(42)};
+		}
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+
+		@include media-breakpoint-up(sm){
+			display: block;
+		}
+	}
+	&__img{
+		flex-shrink: 0;
+		width: rem(80);
+		height: rem(80);
+		@include media-breakpoint-up(sm){
+			width: rem(100);
+			height: rem(100);
+		}
+		@include media-breakpoint-up(xl){
+			width: rem(120);
+			height: rem(120);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 0 rem(40) 0 0;
+		@include media-breakpoint-up(sm){
+			margin: 0 auto rem(30) auto;
+		}
+
+		@include media-breakpoint-up(xl){
+			margin: 0 auto rem(64) auto;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt{
+		line-height: 1.6;
+		letter-spacing: rem(0.3);
+
+		@include media-breakpoint-up(sm){
+			text-align: center;
+			font-size: rem(18);
+		}
+
+		@include media-breakpoint-up(xl){
+			font-size: rem(20);
+		}
+		br{
+			display: none;
+			@include media-breakpoint-up(sm){
+				display: block;
+			}
+		}
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sProgram

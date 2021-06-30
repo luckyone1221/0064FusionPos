@@ -3,20 +3,23 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sProgram/_sProgram.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= null
+	- let  bg= '01.png'
 
 block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-	+mob-mnu()
-	+header()
+	//-+mob-mnu()
+	//+header()
 	+top-nav()
-	+soc()
-	a(href="#modal-call").link-modal-js фывфывфы
+	+headerBlock()
+	+sProgram()
+	//-+soc()
+	//-a(href="#modal-call").link-modal-js фывфывфы
 	//-+b.tabs--js
 		+e.caption.d-flex
 			+e.btn.btn.btn-success.active  btn  2 1
@@ -34,7 +37,7 @@ block pagecontent
 			+e.content content 3
 			+e.content content 4
 	+topLine()
-	+headerBlock()
+	//-+headerBlock()
 	+sForm()
 	+sContact()
 	+footer()

@@ -276,7 +276,6 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
 		if (!topNav) return;
@@ -333,7 +332,42 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	// modal window
+
+	//luckyoneJs
+	let topNav = document.querySelector(".top-nav--js");
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--top-nav-height', `${topNav.offsetHeight}px`);
+	}
+	window.addEventListener('resize', calcHeaderHeight, { passive: true });
+	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+	calcHeaderHeight();
+
+	$('img.img-svg-js').each(function () {
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function (data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = $(data).find('svg'); // Add replaced image's classes to the new SVG
+
+			if (typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass + ' replaced-svg');
+			} // Remove any invalid XML tags as per http://validator.w3.org
+
+
+			$svg = $svg.removeAttr('xmlns:a'); // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+
+			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
+			} // Replace image with new SVG
+
+
+			$img.replaceWith($svg);
+		}, 'xml');
+	});
+
+
+	//end luckyoneJs
 
 };
 if (document.readyState !== 'loading') {

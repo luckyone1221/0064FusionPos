@@ -38,13 +38,15 @@
     letter-spacing: rem(0.3);
     color: $body-color;
   }
-  &__soc-row{
-    --bs-gutter-x: #{rem(16)};
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+}
 
-    //@include media-breakpoint-up(xxl){
-    //  margin-right: 2px;
-    //}
-  }
+.soc-row{
+  --bs-gutter-x: #{rem(16)};
+
   &__soc{
     width: rem(24);
     height: rem(24);
@@ -60,10 +62,4 @@
       max-height: 100%;
     }
   }
-  &__{}
-  &__{}
-  &__{}
-  &__{}
 }
-
-

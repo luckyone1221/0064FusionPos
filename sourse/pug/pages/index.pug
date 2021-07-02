@@ -4,6 +4,10 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sOpportunity/_sOpportunity.pug
+include ../blocks/sCheck/_sCheck.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sForm/_sForm.pug
 
 block variables
 	- let  mainPage= null 
@@ -13,31 +17,11 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-	//-+mob-mnu()
-	//+header()
 	+top-nav()
 	+headerBlock()
 	+sProgram()
-	//-+soc()
-	//-a(href="#modal-call").link-modal-js фывфывфы
-	//-+b.tabs--js
-		+e.caption.d-flex
-			+e.btn.btn.btn-success.active  btn  2 1
-			+e.btn.btn.btn-success btn 2  2
-			+e.btn.btn.btn-success btn 2  3
-			+e.btn.btn.btn-success btn  2 4
-		+e.wrap
-			+e.content.active content 1
-			+e.content content 2
-			+e.content content 3
-			+e.content content 4
-		+e.wrap
-			+e.content.active content 1
-			+e.content content 2
-			+e.content content 3
-			+e.content content 4
-	+topLine()
-	//-+headerBlock()
+	+sOpportunity()
+	+sCheck()
+	+sWho()
 	+sForm()
-	+sContact()
 	+footer()

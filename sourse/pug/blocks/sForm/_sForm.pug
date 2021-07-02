@@ -1,9 +1,34 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+		+e.bg--1.d-lg-block.d-none
+			img(loading="lazy" src="img/@2x/sFrom-girl.png" alt="")
+		+e.bg--2.d-sm-block.d-none
+			img(loading="lazy" src="img/svg/sFrom-2.svg" alt="")
+		+e.bg--3.d-sm-block.d-none
+			img(loading="lazy" src="img/svg/sFrom-3.svg" alt="")
+		+e.bg--4.d-md-block.d-none
+			img(loading="lazy" src="img/svg/sFrom-4.svg" alt="")
+		+e.container.container
+			+b.section-title
+				h2 Остались вопросы?
+				p Задайте их нашим специалистам. Оставьте ваши контактные данные и мы свяжемся с вами в течении 15 минут
+			+form-wrap()
+				+e.inputs
+					+input('Ваше имя', 'text')
+					+input('Номер телефона', 'rel')
+					+input('Ваш e-mail', 'email')
+					+input('Удобное время для звонка', 'text')
+				+e.btn-cont.text-center.text-sm-start
+					+e.btn(type="submit") Отправить
+				+e.policy
+					| Нажимая кнопку Отправить вы подтверждаете что ознакомлены с
+					|
+					a(href="#") политикой конфиденциальности
+					|
+					| и
+					|
+					a(href='#') правилами обработки персональных данных
+					|
+					| и принимаете их
 	// end sForm

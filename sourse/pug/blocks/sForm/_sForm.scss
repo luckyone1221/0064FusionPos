@@ -1,29 +1,163 @@
+// start .sForm
+.sForm {
+	--sPT: #{rem(50)};
+	--sTPB: #{rem(40)};
+	--sPB: #{rem(50)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(104)};
+		--sTPB: #{rem(20)};
+		--sPB: #{rem(99px)};
+	}
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	background: $gray-110;
+	border-bottom: 2px solid rgba($gray-420, 0.3);
 
+	position: relative;
+	z-index: 1;
+	&__bg{
+		position: absolute;
+		z-index: -2;
+
+		&--1{
+			z-index: -1;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+
+			img{
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+
+			right: 5%;
+			bottom: 0;
+			width: calc(#{rem(631)} * 2 / 3);
+			height: calc(#{rem(856)} * 2 / 3);
+			@include media-breakpoint-up(xl){
+				width: rem(631);
+				height: rem(856);
+			}
+			@include media-breakpoint-up(xxl){
+				right: rem(273);
+				bottom: 0;
+			}
+		}
+		&--2{
+			top: -45px;
+			left: 0;
+		}
+		&--3{
+			right: 0;
+			bottom: 0;
+
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+
+			img{
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+
+			width: calc(392px * 2/3);
+			height: calc(435px * 2/3);
+			@include media-breakpoint-up(xl){
+				width: 392px;
+				height: 435px;
+			}
+		}
+		&--4{
+			bottom: rem(-51);
+			left: 0;
+		}
+
+
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			position: relative;
+			left: -5px;
+		}
+	}
+	.section-title{
+		text-align: center;
+		@include media-breakpoint-up(sm){
+			text-align: left;
+		}
+		h2{
+			letter-spacing: rem(0.3);
+			margin-bottom: rem(22);
+		}
+		p{
+			@include media-breakpoint-up(sm){
+				max-width: rem(340);
+			}
+
+			font-size: rem(15);
+			line-height: (23/15);
+			letter-spacing: rem(0);
+		}
+	}
+
+	.form-wrap{
+		&__inputs{
+			margin-bottom: rem(47);
+			@include media-breakpoint-up(sm){
+				width: rem(368);
+			}
+			max-width: 100%;
+		}
+		&__input-wrap{
+			margin-bottom: rem(7);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&__input{
+			border-left: none;
+			border-right: none;
+			border-top: none;
+
+		}
+		&__btn-cont{
+			margin-bottom: rem(36);
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+
+			color: $white!important;
+			font-weight: bold;
+			font-size: rem(20);
+			line-height: (24/20);
+
+			letter-spacing: rem(0.3);
+			width: rem(390);
+			max-width: 100%;
+			padding: rem(16) rem(30);
+
+		}
+		&__policy{
+			text-align: center;
+			@include media-breakpoint-up(sm){
+				text-align: left;
+			}
+
+			font-size: rem(13);
+			color: $gray-991;
+			font-family: $mono;
+
+			max-width: rem(625);
+		}
+		&__{}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
 } // end.sForm

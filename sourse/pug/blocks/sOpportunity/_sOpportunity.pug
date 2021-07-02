@@ -1,0 +1,75 @@
+mixin sOpportunity(data)
+	// start sOpportunity
+	+b.SECTION.sOpportunity.section#sOpportunity&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2
+					| Возможности программы
+					|
+					span.text-blue Fusion POS
+			+e.items
+				+sOpportunityItem({
+					imgNum: 1,
+					title: 'Рабочее место официанта (кассира)',
+					footer: true,
+				})
+					+sOpportunityVantageItem('РЕЖИМ КАФЕ', '')
+						| Обслуживание по залам, столам, с
+						|
+						br.d-none.d-xl-block
+						| возможностью переноса заказа,
+						|
+						br.d-none.d-xl-block
+						| объединения его и разделения.
+					+sOpportunityVantageItem('РЕЖИМ ФАСТ-ФУДА', 'Обслуживанием по заказам, без выбора зала и стола')
+					+sOpportunityVantageItem('РЕЖИМ ДОСТАВКИ', 'Организация и управление доставкой')
+				+sOpportunityItem({
+					imgNum: 2,
+					title: 'Панель управления',
+				})
+					+sOpportunityVantageItem('УПРАВЛЕНИЕ МЕНЮ', 'Ингредиенты, товары, блюда, полуфабрикаты, технологические карты, модификаторы')
+					+sOpportunityVantageItem('УПРАВЛЕНИЕ СКЛАДОМ', 'Обзор склада, производство, инвентаризация, накладные, система расчета себестоимости')
+					+sOpportunityVantageItem('УПРАВЛЕНИЕ ЛОЯЛЬНОСТЬЮ', 'Скидки, Бонусы, счастливые часы, клиенты, группы клиентов')
+					+sOpportunityVantageItem('УПРАВЛЕНИЕ БИЗНЕСОМ', 'Графики, отчеты, аналитика')
+				+sOpportunityItem({
+					imgNum: 3,
+					title: 'Мобильное приложение',
+				})
+					+sOpportunityVantageItem('УПРАВЛЕНИЕ БИЗНЕСОМ', 'Основные показатели')
+					+sOpportunityVantageItem('АКТУАЛЬНАЯ ИНФОРМАЦИЯ', 'Информация о состоянии продаж, остатках на складе, количестве гостей и заказах на текущий момент')
+					+sOpportunityVantageItem('КОНТРОЛЬ БИЗНЕСА ИЗ ЛЮБОЙ ТОЧКИ', 'Скидки, счастливые часы, клиенты, депозиты, бонусная система')
+
+	// end sOpportunity
+
+mixin sOpportunityItem(data)
+	+e.item
+		+e.row.row
+			+e.img-col.col-lg-6
+				+e.img
+					img(loading="lazy" src=`img/svg/sOpportunity-${data.imgNum}.svg` alt="")
+			+e.content-col.col-lg
+				+e.title=data.title
+				+e.vantage
+					block
+				if data.footer
+					+e.f-row.row
+						.col
+							+e.f-sub-row.row
+								.col-auto
+									+e.img-btn(href='#')
+										img(loading="lazy" src="img/svg/appstore.svg" alt='')
+								.col-auto
+									+e.img-btn(href='#')
+										img(loading="lazy" src="img/svg/googleplay.svg" alt='')
+						.col-auto
+							+e.video-btn(href="#") Видеопрезентация
+
+
+mixin sOpportunityVantageItem(title, txt)
+	+e.vantage-item
+		+e.v-title=title
+		if block
+			+e.v-txt
+				block
+		else
+			+e.v-txt=txt

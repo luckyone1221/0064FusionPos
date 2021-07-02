@@ -1,0 +1,74 @@
+// start .sCheck
+.sCheck {
+	--sPT: #{rem(19)};
+	--sPB: #{rem(60)};
+	--sTPB: #{rem(40)};
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			position: relative;
+			left: -5px;
+		}
+	}
+
+	&__row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(30)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(30)};
+			--bs-gutter-y: #{rem(40)};
+		}
+
+		@include media-breakpoint-up(xl){
+			--bs-gutter-y: #{rem(62)};
+		}
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(sm){
+			display: block;
+		}
+	}
+	&__circle{
+		flex-shrink: 0;
+		position: relative;
+
+		width: rem(65);
+		height: rem(65);
+		border-radius: 50%;
+		border: rem(6) solid $blue;
+		img{
+			position: absolute;
+			top: -16%;
+			left: 33%;
+		}
+
+		margin: 0 rem(50) 0 0;
+		@include media-breakpoint-up(sm){
+			margin: 0 auto rem(48) auto;
+		}
+	}
+	&__txt-box{
+		br{
+			display: none;
+			@include media-breakpoint-up(sm){
+				display: block;
+			}
+		}
+	}
+	&__title{
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: (24/20);
+		letter-spacing: rem(.03);
+		margin-bottom: rem(24);
+	}
+	&__txt{
+		letter-spacing: rem(0.2);
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sCheck

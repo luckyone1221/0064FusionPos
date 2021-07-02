@@ -1,2 +1,18 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer
+    +e.container.container
+      +e.row.row.align-items-center.gy-4
+        .col.col-md-auto
+          +e.logo(href="/")
+            img(loading="lazy" src="img/svg/logo.svg" alt="")
+        .col-auto.col-md
+          +e.logo-alt
+            img(loading="lazy" src="img/svg/logo-alt.svg" alt="")
+        .col-12.d-md-none
+        .col.col-md-auto
+          +e.tell(href="tel:88007757427") 8 (800) 775-74-27
+        .col-auto
+          +b.soc-row.row
+            +topNavSocItem('wa')
+            +topNavSocItem('tg')
+            +topNavSocItem('vb')

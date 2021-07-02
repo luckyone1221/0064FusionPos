@@ -1,0 +1,24 @@
+mixin sCheck(data)
+	// start sCheck
+	+b.SECTION.sCheck.section#sCheck&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+sCheckItem(`Кроссплатформенность`, `Работа на любых устройствах под управлением Windows, iOS, <br> Android`)
+				+sCheckItem(`Работа с различным <br> торговым оборудованием`, `сканеры, весы, принтеры <br> чеков`)
+				+sCheckItem(`Интеграция <br> с эквайрингами`, `Сбербанк, UCS, Ingenico`)
+				+sCheckItem(`Возможность заказной <br> интеграции`, `специалистов Fusion POS с <br> любым программным <br> обеспечением`)
+				+sCheckItem(`Использование <br> неограниченных <br> облачных ресурсов`)
+				+sCheckItem(`Работа <br> с онлайн кассами`)
+				+sCheckItem(`Интеграция <br> со службой доставки <br> Delivery Club`)
+				+sCheckItem(`Интеграция <br> с 1С решениями`)
+	// end sCheck
+
+mixin sCheckItem(title, txt)
+	.col-sm-6.col-lg-3
+		+e.item.text-sm-center
+			+e.circle
+				img(loading="lazy" src="img/svg/check-big.svg" alt="")
+			+e.txt-box
+				+e.title!=title
+				if txt
+					+e.txt!=txt

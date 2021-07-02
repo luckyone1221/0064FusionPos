@@ -1,0 +1,51 @@
+mixin sWho(data)
+	// start sWho
+	+b.SECTION.sWho.section#sWho&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2
+					| Для кого подойдет система
+					|
+					span.text-blue FusionPos
+				p Отлично подойдет для автоматизации одиночных и сетевых ресторанов, баров, кафе, пиццерий, кальянных, суши баров, пекарен, лапшичных, фудтраков и небольших магазинов
+			+e.main-row.row
+				.col-lg-6
+					+e.sub-row.row
+						.col
+							+sWhoImgItem(1,'Ресторан', 'item-1')
+						+e.sm-col.col-auto
+							+sWhoImgItem(2,'Кофейня', 'item-2')
+				.col-lg-6
+					+e.sub-row.row
+						.col
+							+sWhoImgItem(3,'Фудтрак', 'item-3')
+							+sWhoImgItem(4,'Кальянная', 'item-4')
+						+e.sm-col.col-auto
+							+sWhoImgItem(5,'Бар', 'item-5')
+				.col-lg-6
+					+e.sub-row.row
+						+e.sm-col.col-auto
+							+sWhoImgItem(6,'Пекарня', 'item-6')
+						.col
+							+sWhoImgItem(7,'Пицерия', 'item-7')
+							+sWhoImgItem(8,'Магазин', 'item-8')
+				.col-lg-6
+					+e.sub-row.row
+						+e.sm-col.col-auto
+							+sWhoImgItem(9,'Столовая', 'item-9')
+						.col
+							+e.blue-cont
+								+sWhoImgItem(10,'Фаст-Фуд', 'item-10')
+								+e.blue-box.text-center
+									+e.b-title Другой бизнес?
+									+e.b-txt Раскажите нам и мы подберем индивидуальное решение
+			.text-center
+				+e.btn(href='#') Перейти к тафрифам
+	// end sWho
+
+mixin sWhoImgItem(imgNum, txt, addClasses)
+	+e.item(class=addClasses)
+		+e.img
+			img(loading="lazy" src=`img/@2x/sWho-${imgNum}.jpg` alt="")
+		+e.txt=txt
+

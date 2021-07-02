@@ -1,43 +1,54 @@
 .footer {
-		
-	margin-top: auto;
+	background: $gray-110;
+	position: relative;
+	z-index: 1;
 
-// 
-@include media-breakpoint-up(xl) {}
+	padding: rem(55) 0;
 
-@include media-breakpoint-up(lg) {}
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding: 0 20px 0 10px;
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(24)};
+	}
+	&__logo{
+		display: block;
+		width: rem(121);
 
-@include media-breakpoint-up(md) {}
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+	}
+	&__logo-alt{
+		@include media-breakpoint-up(md){
+			margin-left: rem(40);
+		}
+		display: block;
+		width: rem(134);
 
-@include media-breakpoint-up(sm) {}
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+		img{}
+	}
 
-@include media-breakpoint-up(xs) {}
+	&__tell{
+		text-decoration: none;
+		font-weight: bold;
+		line-height: (29/24);
 
-
-// 
-@include media-breakpoint-between(md, xl) {}
-
-
-// 
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
-
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+		font-size: rem(20);
+		@include media-breakpoint-up(sm){
+			font-size: rem(24);
+			letter-spacing: rem(0.3);
+		}
+		color: $body-color;
+	}
+	&__{}
+	&__{}
+	&__{}
 }

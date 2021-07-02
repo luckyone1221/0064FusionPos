@@ -1,12 +1,13 @@
 // start .sProgram
 .sProgram {
-	--sPB: #{rem(40)};
 
 	--sPT: #{rem(30)};
 	--sTPB: #{rem(65)};
+	--sPB: #{rem(60)};
 	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(55)};
 		--sTPB: #{rem(96)};
+		--sPB: #{rem(90)};
 	}
 
 	&__container{
